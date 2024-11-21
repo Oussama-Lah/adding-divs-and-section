@@ -35,7 +35,7 @@ btn.addEventListener("click", function () {
   }
 });
 
-// document.forms[0].onsubmit = (e) => e.preventDefault();
+document.forms[0].onsubmit = (e) => e.preventDefault();
 
 // here my logic is flawed:
 //1-I did not count the option of both the element and text field if they were empy what would happen
