@@ -1,47 +1,48 @@
-const elements = document.querySelector("[name=elements]");
-const text = document.querySelector("[name=texts]");
-const btn = document.querySelector("[name=create]");
-const rslt = document.querySelector("[class=results]");
-const select = document.querySelector("select");
+// const elements = document.querySelector("[name=elements]");
+// const text = document.querySelector("[name=texts]");
+// const btn = document.querySelector("[name=create]");
+// const rslt = document.querySelector("[class=results]");
+// const select = document.querySelector("select");
 
-btn.addEventListener("click", function () {
-  rslt.innerHTML = ""; // i need this so i can store the result;
-  if (elements.value !== "" && text.value !== "") {
-    for (let i = 0; i < elements.value; i++) {
-      // look below i can make this part shorter;
-      if (select.value === "Div") {
-        const paragraph = document.createElement("div");
-        paragraph.textContent = `${text.value}`;
-        paragraph.setAttribute("class", "box");
-        paragraph.setAttribute("title", "Element");
-        paragraph.setAttribute("id", `id-${i + 1}`);
-        rslt.appendChild(paragraph);
-      } else {
-        const paragraph = document.createElement("section");
-        paragraph.textContent = `${text.value}`;
-        paragraph.setAttribute("class", "box");
-        paragraph.setAttribute("title", "Element");
-        paragraph.setAttribute("id", `id-${i + 1}`);
-        rslt.appendChild(paragraph);
-      }
-      //the shorter version of the inner if statment;
-      // const paragraph = document.createElement(select.value);
-      // paragraph.textContent = `${text.value}`;
-      // paragraph.setAttribute("class", "box");
-      // paragraph.setAttribute("title", "Element");
-      // paragraph.setAttribute("id", `id-${i + 1}`);
-      // rslt.appendChild(paragraph);
-    }
-  }
-});
+// btn.addEventListener("click", function () {
+//   rslt.innerHTML = ""; // i need this so i can store the result;
+//   if (elements.value !== "" && text.value !== "") {
+//     for (let i = 0; i < elements.value; i++) {
+//       // look below i can make this part shorter;
+//       if (select.value === "Div") {
+//         const paragraph = document.createElement("div");
+//         paragraph.textContent = `${text.value}`;
+//         paragraph.setAttribute("class", "box");
+//         paragraph.setAttribute("title", "Element");
+//         paragraph.setAttribute("id", `id-${i + 1}`);
+//         rslt.appendChild(paragraph);
+//       } else {
+//         const paragraph = document.createElement("section");
+//         paragraph.textContent = `${text.value}`;
+//         paragraph.setAttribute("class", "box");
+//         paragraph.setAttribute("title", "Element");
+//         paragraph.setAttribute("id", `id-${i + 1}`);
+//         rslt.appendChild(paragraph);
+//       }
+//       //the shorter version of the inner if statment;
+//       // const paragraph = document.createElement(select.value);
+//       // paragraph.textContent = `${text.value}`;
+//       // paragraph.setAttribute("class", "box");
+//       // paragraph.setAttribute("title", "Element");
+//       // paragraph.setAttribute("id", `id-${i + 1}`);
+//       // rslt.appendChild(paragraph);
+//     }
+//   }
+// });
 
-document.forms[0].onsubmit = (e) => e.preventDefault();
-// -------------------------------------------------------------------------------------------------
+// document.forms[0].onsubmit = (e) => e.preventDefault();
 
 // here my logic is flawed:
 //1-I did not count the option of both the element and text field if they were empy what would happen
 //2- and waht if only one of them is empty ;
-//  -------------------- this is the answer by another guy :-------------------------------
+
+//  this is the answer i found in github:--------------------------------
+
 // try to understand it : and compare it with yours;
 
 // const numInput = document.querySelector('[name="elements"]');
