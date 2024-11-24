@@ -1,27 +1,35 @@
 form {
   text-align: center;
 }
-input,
-select {
-  width: 300px; /*sets a consistent width */
-  margin: 5px;
-  padding: 5px;
-  box-sizing: border-box; /*ensures padding doesn't increase total width*/
-  appearance: none; /* removes browser-specific styling */
-}
+
 input[name="create"] {
   background-color: green;
   color: white;
 }
 
-div .box {
-  display: inline-block;
-  align-content: center;
-  width: 250px;
-  height: 50px;
-  color: white;
-  background-color: rgb(255, 144, 54);
-  padding: 5px;
-  margin: 10px;
+input,
+select {
+  width: 350px; /*sets a consistent width */
+  margin: 5px;
+  padding: 8px;
+  box-sizing: border-box; /*ensures padding doesn't increase total width*/
+  appearance: none; /* removes browser-specific styling */
+}
+.results {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+  margin-top: 20px;
+}
+.results > div,
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkorange;
+  border: 0.5px solid black;
   border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
 }
